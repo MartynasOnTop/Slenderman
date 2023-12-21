@@ -9,7 +9,8 @@ public class Enemy : MonoBehaviour
     public int speed;
     public float viewDistance = 10;
     public float wanderDistance = 5;
-    public AnimationState walk;
+
+    public Animator movement;
 
     NavMeshAgent agent;
 
@@ -25,13 +26,16 @@ public class Enemy : MonoBehaviour
         if (distance < viewDistance)
         {
             agent.destination = target.position;
+            movement.Play("Run");
         }
         else
         {
+            movement.Play("Walk");
             if (agent.velocity == Vector3.zero)
             {
                 var offset = Random.insideUnitSphere * wanderDistance;
                 agent.destination = transform.position + offset;
+                movement.Play("Idle");
             }
         }
 
