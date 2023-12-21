@@ -32,7 +32,7 @@ public class Flashlight : MonoBehaviour
             light.enabled = false;
             percent.text = "0";
         }
-        else if (battery <= 10)
+        else if (battery <= 4)
         {
             isOn = !isOn;
         }
