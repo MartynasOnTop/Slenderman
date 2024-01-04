@@ -8,6 +8,8 @@ public class Flashlight : MonoBehaviour
     public bool isOn;
     public Light light;
 
+    public int dischargeRate = 2;
+
     int battery = 100;
     public TMP_Text percent;
 
@@ -41,7 +43,7 @@ public class Flashlight : MonoBehaviour
     {
         if (isOn)
         {
-            battery -= 2;
+            battery -= dischargeRate;
             percent.text = battery.ToString();
         }
         if (battery >= 70)
