@@ -29,7 +29,6 @@ public class PageManager : MonoBehaviour
         if (pages == 1)
         {
             enemy.target = transform;
-            scream.Play();
         }
         if (pages == 2)
         {
@@ -49,7 +48,7 @@ public class PageManager : MonoBehaviour
         }
         if (pages == 6)
         {
-            firstPersonMovement.runSpeed = firstPersonMovement.speed;
+            firstPersonMovement.canRun = false;
         }
         if (pages == 7)
         {
