@@ -26,32 +26,32 @@ public class PageManager : MonoBehaviour
         pagePicture.SetActive(true);
 
 
-        if (pages >= 1)
+        if (pages == 1)
         {
             enemy.target = transform;
             scream.Play();
         }
-        if (pages >= 2)
+        if (pages == 2)
         {
             enemy.speed *= 2;
         }
-        if (pages >= 3)
+        if (pages == 3)
         {
             enemy.wanderDistance *= 2;
         }
-        if (pages >= 4)
+        if (pages == 4)
         {
             flashlight.dischargeRate = 3;
         }
-        if (pages >= 5)
+        if (pages == 5)
         {
             enemy.viewDistance *= 2;
         }
-        if (pages >= 6)
+        if (pages == 6)
         {
             firstPersonMovement.runSpeed = firstPersonMovement.speed;
         }
-        if (pages >= 7)
+        if (pages == 7)
         {
             enemy.viewDistance *= 100;
             enemy.speed *= 2;
